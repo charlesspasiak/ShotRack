@@ -15,12 +15,10 @@ type ProjectSearch = {
   };
 };
 
-type SearchParams = {
-  category?: string;
-};
-
 type Props = {
-  searchParams: SearchParams;
+  searchParams: {
+    category?: string;
+  };
 };
 
 const Home = async ({ searchParams: { category } }: Props) => {
