@@ -56,7 +56,7 @@ export const createUserMutation = `
 
 export const getProjectsQuery = `
   query getProjects($endCursor: String) {
-    projectSearch(first: 8, after: $endCursor) {
+    projectSearch(first: 1, after: $endCursor) {
       pageInfo {
         hasNextPage
         hasPreviousPage

@@ -3,24 +3,24 @@ export const NavLinks = [
   { href: '/', key: 'Find Projects', text: 'Find Projects' },
   { href: '/', key: 'Learn Development', text: 'Learn Development' },
   { href: '/', key: 'Career Advancement', text: 'Career Advancement' },
-  { href: '/', key: 'Hire Developers', text: 'Hire Developers' },
+  { href: '/', key: 'Hire Developers', text: 'Hire Developers' }
 ];
 
 export const categoryFilters = [
-  'Frontend',
-  'Backend',
-  'Full-Stack',
-  'Mobile',
-  'UI/UX',
-  'Game Dev',
-  'DevOps',
-  'Data Science',
-  'Machine Learning',
-  'Cybersecurity',
-  'Blockchain',
-  'E-commerce',
-  'Chatbots',
-];
+  "Frontend",
+  "Backend",
+  "Full-Stack",
+  "Mobile",
+  "UI/UX",
+  "Game Dev",
+  "DevOps",
+  "Data Science",
+  "Machine Learning",
+  "Cybersecurity",
+  "Blockchain",
+  "E-commerce",
+  "Chatbots"
+]
 
 export const footerLinks = [
   {
@@ -37,11 +37,17 @@ export const footerLinks = [
   },
   {
     title: 'Hire developers',
-    links: ['Post a job opening', 'Post a freelance project', 'Search for developers'],
+    links: [
+      'Post a job opening',
+      'Post a freelance project',
+      'Search for developers',
+    ],
   },
   {
     title: 'Brands',
-    links: ['Advertise with us'],
+    links: [
+      'Advertise with us',
+    ],
   },
   {
     title: 'Company',
@@ -59,11 +65,22 @@ export const footerLinks = [
   },
   {
     title: 'Directories',
-    links: ['Development jobs', 'Developers for hire', 'Freelance developers for hire', 'Tags', 'Places'],
+    links: [
+      'Development jobs',
+      'Developers for hire',
+      'Freelance developers for hire',
+      'Tags',
+      'Places',
+    ],
   },
   {
     title: 'Development assets',
-    links: ['Code Marketplace', 'GitHub Marketplace', 'NPM Registry', 'Packagephobia'],
+    links: [
+      'Code Marketplace',
+      'GitHub Marketplace',
+      'NPM Registry',
+      'Packagephobia',
+    ],
   },
   {
     title: 'Development Resources',
@@ -77,3 +94,4 @@ export const footerLinks = [
     ],
   },
 ];
+

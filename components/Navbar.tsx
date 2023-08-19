@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import AuthProviders from './AuthProviders';
 import { getCurrentUser } from '@/lib/session';
+import { signOut } from 'next-auth/react';
 import ProfileMenu from './ProfileMenu';
 import Button from './Button';
 
@@ -13,7 +14,7 @@ const Navbar = async () => {
     <nav className="flexBetween navbar">
       <div className="flex-1 flexStart gap-10">
         <Link href="/">
-          <Image src="/logo.svg" width={116} height={43} alt="logo" />
+          <Image src="/logo.svg" width={115} height={43} alt="Flexibble" />
         </Link>
         <ul className="xl:flex hidden text-small gap-7">
           {NavLinks.map((link) => (
@@ -28,6 +29,7 @@ const Navbar = async () => {
         {session?.user ? (
           <>
             <ProfileMenu session={session} />
+
             <Link href="/create-project">
               <Button title="Share work" />
             </Link>
@@ -39,4 +41,5 @@ const Navbar = async () => {
     </nav>
   );
 };
+
 export default Navbar;

@@ -1,10 +1,10 @@
-'use client';
+"use client"
 
-import { deleteProject, fetchToken } from '@/lib/actions';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { deleteProject, fetchToken } from '@/lib/actions'
+import Image from 'next/image'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+import React, { useState } from 'react'
 
 const ProjectActions = ({ projectId }: { projectId: string }) => {
   const router = useRouter();
@@ -24,7 +24,8 @@ const ProjectActions = ({ projectId }: { projectId: string }) => {
     } finally {
       setIsDeleting(false);
     }
-  };
+  }
+
 
   return (
     <>
@@ -40,6 +41,7 @@ const ProjectActions = ({ projectId }: { projectId: string }) => {
         <Image src="/trash.svg" width={15} height={15} alt="delete" />
       </button>
     </>
-  );
-};
-export default ProjectActions;
+  )
+}
+
+export default ProjectActions

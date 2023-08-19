@@ -1,12 +1,12 @@
 import { Menu } from '@headlessui/react';
-import Image from 'next/image';
+import Image from 'next/image'
 
 type Props = {
   title: string;
   state: string;
   filters: Array<string>;
   setState: (value: string) => void;
-};
+}
 
 const CustomMenu = ({ title, state, filters, setState }: Props) => {
   return (
@@ -18,7 +18,12 @@ const CustomMenu = ({ title, state, filters, setState }: Props) => {
         <div>
           <Menu.Button className="flexCenter custom_menu-btn">
             {state || 'Select a category'}
-            <Image src="/arrow-down.svg" width={10} height={5} alt="Arrow down" />
+            <Image
+              src="/arrow-down.svg"
+              width={10}
+              height={5}
+              alt="Arrow down"
+            />
           </Menu.Button>
         </div>
         <Menu.Items className="flexStart custom_menu-items">
@@ -37,6 +42,7 @@ const CustomMenu = ({ title, state, filters, setState }: Props) => {
         </Menu.Items>
       </Menu>
     </div>
-  );
-};
-export default CustomMenu;
+  )
+}
+
+export default CustomMenu

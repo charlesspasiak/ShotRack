@@ -29,13 +29,11 @@ const makeGraphQLRequest = async (query: string, variables = {}) => {
 
 export const getUser = (email: string) => {
   client.setHeader('x-api-key', apiKey);
-
   return makeGraphQLRequest(getUserQuery, { email });
 };
 
 export const createUser = (name: string, email: string, avatarUrl: string) => {
   client.setHeader('x-api-key', apiKey);
-
   const variables = {
     input: {
       name,
@@ -101,13 +99,11 @@ export const fetchAllProjects = async (category?: string, endCursor?: string) =>
 
 export const getProjectDetails = (id: string) => {
   client.setHeader('x-api-key', apiKey);
-
   return makeGraphQLRequest(getProjectByIdQuery, { id });
 };
 
 export const getUserProjects = (id: string, last?: number) => {
   client.setHeader('x-api-key', apiKey);
-
   return makeGraphQLRequest(getProjectsOfUserQuery, { id, last });
 };
 
@@ -131,16 +127,19 @@ export const updateProject = async (form: ProjectForm, projectId: string, token:
     const imageUrl = await uploadImage(form.image);
 
     if (imageUrl.url) {
-      updatedForm = { ...updatedForm, image: imageUrl.url };
+      updatedForm = {
+        ...form,
+        image: imageUrl.url,
+      };
     }
   }
-
-  client.setHeader('Authorization', `Bearer ${token}`);
 
   const variables = {
     id: projectId,
     input: updatedForm,
   };
+
+  client.setHeader('Authorization', `Bearer ${token}`);
 
   return makeGraphQLRequest(updateProjectMutation, variables);
 };
